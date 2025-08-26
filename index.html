@@ -15,7 +15,27 @@
         .job-title { color: #1e3a8a; font-weight: 600; }
         .company { color: #4b5563; font-weight: 500; }
         .date { color: #6b7280; font-style: italic; }
-        @media print { body { font-size: 12px; } .cv-section { margin-bottom: 1.5rem; } }
+       @media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .cv-section {
+    margin-bottom: 1.5rem;
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
+  * {
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
